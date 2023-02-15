@@ -7,7 +7,7 @@ There are two options for developing with ROHD, either through running it on a G
 
 ### Step 1: Click on the CodeSpace Button
 
-To access the Codespaces feature on the https://github.com/intel/rohd repository, simply click on the "Codespaces" button. 
+To access the Codespaces feature on the https://github.com/intel/rohd repository, simply click on the "Codespaces" button.
 
 Please note that Codespaces are free for all users with a personal GitHub account that have either a Free or Pro plan. However, there is a monthly usage limit. To learn more about this feature, visit the official GitHub Codespaces Overview page at https://docs.github.com/en/codespaces/overview.
 
@@ -33,7 +33,7 @@ Run `dart pub get` on the terminal of the visual studio code to pull your setup.
 
 ![step 4](assets/CodespaceSetup/step4.PNG)
 
-### Step 5: Run the example code 
+### Step 5: Run the example code
 
 Open up `example` folder on the left navigation panel and click on `example.dart` to bring forward the first example of ROHD. After that, navigate to the main function at below of line 58 and click on the `Run` at `Run | Debug`.
 
@@ -49,13 +49,13 @@ To delete the codespace, go back to https://github.com/intel/rohd and click on c
 ![step 6](assets/CodespaceSetup/step6.PNG)
 
 
-## Local Development Setup 
+## Local Development Setup
 
 ROHD can be install in both of the **Windows**, or **Linux** machine.
 
 **Pre-requiresite:**
 
-- Install latest `dart` SDK from official dart website: 
+- Install latest `dart` SDK from official dart website:
     - https://dart.dev/get-dart
 
 - Install Visual Studio Code
@@ -69,7 +69,7 @@ Open up a terminal and create a new dart project. Note that do not create the pr
 dart create -t console rohd-project
 ```
 
-Then `cd` to the created `rohd` directory. 
+Then `cd` to the created `rohd` directory.
 
 ```shell
 cd rohd-project
@@ -221,7 +221,7 @@ Well done! Your setup has been completed successfully. The successful generation
 
 ### Option 2: Install from Source
 
-Clone ROHD repository to the local directory. (Install From Source). On your terminal, run 
+Clone ROHD repository to the local directory. (Install From Source). On your terminal, run
 
 ```shell
 cd C:\
@@ -234,7 +234,7 @@ Next, open up your repository in VSCode using the command:
 code rohd
 ```
 
-You will see VSCode automatically open up your ROHD folder. 
+You will see VSCode automatically open up your ROHD folder.
 
 ![step 2](assets/localSetup/step2.PNG)
 
@@ -249,7 +249,7 @@ Open up `example` folder on the left navigation panel and click on `example.dart
 
 ![step 3](assets/localSetup/step4.PNG)
 
-If you can see SystemVerilog code pop up on the terminal. Congratulation, you are ready with ROHD development! 
+If you can see SystemVerilog code pop up on the terminal. Congratulation, you are ready with ROHD development!
 
 
 ## Docker Container Setup
@@ -258,10 +258,10 @@ There are another options which is to setup on lcoal docker environment. Firstly
 
 Pre-requisites:
 
-- Install docker 
+- Install docker
     - https://docs.docker.com/get-docker
 
-Then, you need to clone rohd repository to your local PC. 
+Then, you need to clone rohd repository to your local PC.
 
 ```shell
 cd C:\
@@ -291,12 +291,12 @@ In the terminal, run:
 dart example/example.dart
 ```
 
-If you can see SystemVerilog code pop up on the terminal. Congratulation, you are ready with ROHD development! 
+If you can see SystemVerilog code pop up on the terminal. Congratulation, you are ready with ROHD development!
 
 ----------------
 2023 February 13
 Author: Yao Jing Quek <<yao.jing.quek@intel.com>>
 
- 
-Copyright (C) 2021-2023 Intel Corporation  
+
+Copyright (C) 2021-2023 Intel Corporation
 SPDX-License-Identifier: BSD-3-Clause
