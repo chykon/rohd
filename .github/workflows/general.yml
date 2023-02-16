@@ -19,6 +19,8 @@ jobs:
 
       - name: mdToHtml
         uses: baileyjm02/markdown-to-pdf@v1
+        with:
+          input-path: ./
 
       - name: Check Markdown links
         uses: lycheeverse/lychee-action@v1
