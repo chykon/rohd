@@ -20,10 +20,15 @@ jobs:
       - name: mdToHtml
         uses: baileyjm02/markdown-to-pdf@v1
         with:
-          input-path: ./
+          input_path: ./
+          images_dir: ./
+          output_dir: ./html
+          build_html: true
 
       - name: Check Markdown links
         uses: lycheeverse/lychee-action@v1
+        #with:
+          #args: --verbose --no-progress './**/*.md' './**/*.html'
 
       - name: Setup Dart
         uses: dart-lang/setup-dart@v1
