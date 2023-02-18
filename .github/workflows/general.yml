@@ -17,6 +17,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
+      - name: Run GitHub Super-Linter
+        uses: github/super-linter@v4
+
       - name: Check Markdown links
         uses: gaurav-nelson/github-action-markdown-link-check@1.0.14
         with:
