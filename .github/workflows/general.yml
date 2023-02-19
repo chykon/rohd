@@ -19,6 +19,10 @@ jobs:
 
       - name: Run GitHub Super-Linter
         uses: github/super-linter/slim@v4
+        env:
+          ERROR_ON_MISSING_EXEC_BIT: true
+          VALIDATE_DART: false
+          YAML_ERROR_ON_WARNING: true
 
       - name: Check Markdown links
         uses: gaurav-nelson/github-action-markdown-link-check@1.0.14
