@@ -34,6 +34,19 @@ jobs:
       - name: Install project dependencies
         run: tool/gh_actions/install_dependencies.sh
 
+      - name: dart pub global activate coverage
+        run: dart pub global activate coverage
+
+      - name: sudo apt install lcov
+        run: sudo apt install lcov
+
+      - name: Generate coverage
+        run: tool/generate_coverage.sh
+
+      - uses: VeryGoodOpenSource/very_good_coverage@v2
+        with:
+          path: build/coverage/lcov.info
+
       - name: Verify project formatting
         run: tool/gh_actions/verify_formatting.sh
 
@@ -48,11 +61,6 @@ jobs:
 
       - name: Run project tests
         run: tool/gh_actions/run_tests.sh
-
-      #- name: Generate coverage
-      #  run: tool/generate_coverage.sh
-
-      - uses: VeryGoodOpenSource/very_good_coverage@v2
 
       - name: Check folder - tmp_test
         run: tool/gh_actions/check_folder_tmp_test.sh
