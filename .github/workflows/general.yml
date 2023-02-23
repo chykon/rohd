@@ -40,6 +40,9 @@ jobs:
       - name: sudo apt install lcov
         run: sudo apt install lcov
 
+      - name: Install software - Icarus Verilog
+        run: tool/gh_actions/install_iverilog.sh
+
       - name: Generate coverage
         run: tool/generate_coverage.sh
 
