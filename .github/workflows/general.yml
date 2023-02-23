@@ -49,6 +49,11 @@ jobs:
       - name: Run project tests
         run: tool/gh_actions/run_tests.sh
 
+      #- name: Generate coverage
+      #  run: tool/generate_coverage.sh
+
+      - uses: VeryGoodOpenSource/very_good_coverage@v2
+
       - name: Check folder - tmp_test
         run: tool/gh_actions/check_folder_tmp_test.sh
 
