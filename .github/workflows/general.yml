@@ -46,9 +46,11 @@ jobs:
       - name: Generate coverage
         run: tool/generate_coverage.sh
 
-      - uses: VeryGoodOpenSource/very_good_coverage@v2
-        with:
-          path: build/coverage/lcov.info
+      - uses: romeovs/lcov-reporter-action@v0.3.1
+
+      #- uses: VeryGoodOpenSource/very_good_coverage@v2
+      #  with:
+      #    path: build/coverage/lcov.info
 
       - name: Verify project formatting
         run: tool/gh_actions/verify_formatting.sh
