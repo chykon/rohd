@@ -34,6 +34,31 @@ jobs:
       - name: Install project dependencies
         run: tool/gh_actions/install_dependencies.sh
 
+      - name: dart pub global activate coverage
+        run: dart pub global activate coverage
+
+      - name: sudo apt install lcov
+        run: sudo apt install lcov
+
+      - name: Install software - Icarus Verilog
+        run: tool/gh_actions/install_iverilog.sh
+
+      - name: Generate coverage
+        run: tool/generate_coverage.sh
+
+      - uses: zgosalvez/github-actions-report-lcov@v3
+        with:
+          coverage-files: build/coverage/lcov.info
+          #minimum-coverage: 90
+          #artifact-name: code-coverage-report
+          #github-token: ${{ secrets.GITHUB_TOKEN }}
+          #working-directory: apps/my-first-app
+          #update-comment: true
+
+      #- uses: VeryGoodOpenSource/very_good_coverage@v2
+      #  with:
+      #    path: build/coverage/lcov.info
+
       - name: Verify project formatting
         run: tool/gh_actions/verify_formatting.sh
 
